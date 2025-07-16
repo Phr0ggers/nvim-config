@@ -19,8 +19,10 @@ vim.keymap.set('i', 'jj', '<Esc>')
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
+
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
@@ -39,4 +41,6 @@ rtp:prepend(lazypath)
 require('lazy').setup({
   require 'plugins.treesitter',
   require 'plugins.miniNvim',
+  require 'plugins.nvim-tree',
+  require 'plugins.gruvbox-colorscheme',
 })
