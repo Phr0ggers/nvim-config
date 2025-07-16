@@ -9,9 +9,15 @@ vim.o.number = true
 
 vim.o.mouse = 'a'
 
+vim.o.showmode = false
+
 vim.schedule(function()
   vim.o.clipboard = 'unnamedplus'
 end)
+
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
 
 -- [[ Custom Keymaps ]]
 
@@ -39,8 +45,10 @@ rtp:prepend(lazypath)
 -- [[ Plugin Section ]]
 
 require('lazy').setup({
+  'NMAC427/guess-indent.nvim',
   require 'plugins.treesitter',
   require 'plugins.miniNvim',
   require 'plugins.nvim-tree',
   require 'plugins.gruvbox-colorscheme',
+	require 'plugins.gitsigns',
 })
