@@ -3,7 +3,7 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-vim.g.have_nerd_font = true 
+vim.g.have_nerd_font = true
 
 vim.o.number = true
 
@@ -51,4 +51,7 @@ require('lazy').setup({
   require 'plugins.nvim-tree',
   require 'plugins.gruvbox-colorscheme',
 	require 'plugins.gitsigns',
+	require 'plugins.telescope',
+	require 'plugins.LSP',
+	require 'plugins.autocomplete',
 })
