@@ -29,6 +29,7 @@ end)
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
+vim.opt.expandtab = true
 
 vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
@@ -72,9 +73,10 @@ require('lazy').setup({
   require 'plugins.miniNvim',
   require 'plugins.nvim-tree',
   require 'plugins.gruvbox-colorscheme',
-	require 'plugins.gitsigns',
-	require 'plugins.telescope',
-	require 'plugins.LSP',
-	require 'plugins.autocomplete',
-	require 'plugins.whichkey',
+  require 'plugins.gitsigns',
+  require 'plugins.telescope',
+  require 'plugins.LSP',
+  require 'plugins.autocomplete',
+  require 'plugins.whichkey',
+  require 'plugins.autopairs',
 })
