@@ -79,4 +79,5 @@ require('lazy').setup({
   require 'plugins.autocomplete',
   require 'plugins.whichkey',
   require 'plugins.autopairs',
+  require 'plugins.lualine',
 })
