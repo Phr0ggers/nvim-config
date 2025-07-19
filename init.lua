@@ -80,4 +80,5 @@ require('lazy').setup({
   require 'plugins.whichkey',
   require 'plugins.autopairs',
   require 'plugins.lualine',
+  require 'plugins.vim-obsession',
 })
