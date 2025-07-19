@@ -49,6 +49,7 @@ vim.keymap.set('i', 'jj', '<Esc>')
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 
@@ -80,5 +81,5 @@ require('lazy').setup({
   require 'plugins.whichkey',
   require 'plugins.autopairs',
   require 'plugins.lualine',
-  require 'plugins.vim-obsession',
+  -- require 'plugins.vim-obsession',
 })

@@ -13,5 +13,16 @@ return
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
+
+      -- require('which-key').register({
+      --   s = {
+      --     name = 'Surround',
+      --     a = '[S]urround [A]dd [)]',
+      --     d = '[S]urrounding [D]elete',
+      --     f = '[S]urrounding [f]ind (right)',
+      --     r = '[S]urrounding [F]ind (left)'
+      --
+      --   }
+      -- })
     end,
 }
