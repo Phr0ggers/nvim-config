@@ -1,1 +1,1 @@
-My nvim config, heavily inspired by kickstart.nvim
+My nvim config, inspired by kickstart.nvim
