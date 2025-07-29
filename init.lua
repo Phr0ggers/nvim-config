@@ -82,4 +82,5 @@ require('lazy').setup({
   require 'plugins.autopairs',
   require 'plugins.lualine',
   -- require 'plugins.vim-obsession',
+  'vyfor/cord.nvim',
 })
