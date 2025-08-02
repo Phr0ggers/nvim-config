@@ -42,6 +42,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+vim.g.rust_recommended_style = 0
 -- [[ Custom Keymaps ]]
 
 vim.keymap.set('i', 'jj', '<Esc>')
@@ -69,7 +70,7 @@ rtp:prepend(lazypath)
 -- [[ Plugin Section ]]
 
 require('lazy').setup({
-  'NMAC427/guess-indent.nvim',
+  'nmac427/guess-indent.nvim',
   require 'plugins.treesitter',
   require 'plugins.miniNvim',
   require 'plugins.nvim-tree',
