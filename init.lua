@@ -71,6 +71,7 @@ rtp:prepend(lazypath)
 
 require('lazy').setup({
   'nmac427/guess-indent.nvim',
+  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
   require 'plugins.treesitter',
   require 'plugins.miniNvim',
   require 'plugins.nvim-tree',
