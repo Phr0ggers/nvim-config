@@ -9,6 +9,6 @@ return {
         strings = false,
       }
     }
-    vim.cmd.colorscheme 'gruvbox'
+    -- vim.cmd.colorscheme 'gruvbox'
   end,
 }

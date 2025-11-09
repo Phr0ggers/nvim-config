@@ -76,6 +76,7 @@ require('lazy').setup({
   require 'plugins.miniNvim',
   require 'plugins.nvim-tree',
   require 'plugins.gruvbox-colorscheme',
+  require 'plugins.catppuccin-colorscheme',
   require 'plugins.gitsigns',
   require 'plugins.telescope',
   require 'plugins.LSP',
@@ -86,3 +87,8 @@ require('lazy').setup({
   -- require 'plugins.vim-obsession',
   'vyfor/cord.nvim',
 })
+
+
+-- [[ Colortheme ]]
+
+vim.cmd.colorscheme 'catppuccin'
