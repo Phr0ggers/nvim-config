@@ -22,9 +22,7 @@ vim.o.smartcase = true
 
 vim.o.confirm = true
 
-vim.schedule(function()
-  vim.o.clipboard = 'unnamedplus'
-end)
+vim.opt.clipboard = 'unnamedplus'
 
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
@@ -41,6 +39,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
+
+
 
 vim.g.rust_recommended_style = 0
 -- [[ Custom Keymaps ]]
