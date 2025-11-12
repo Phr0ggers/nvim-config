@@ -14,6 +14,7 @@ return {
         which_key = true,
         telescope = true,
       },
+      show_end_of_buffer = false
     }
   end
 }

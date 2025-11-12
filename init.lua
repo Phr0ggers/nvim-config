@@ -40,6 +40,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+vim.opt.fillchars:append { eob = " " }
+vim.o.linespace = 2
+
 
 
 vim.g.rust_recommended_style = 0
