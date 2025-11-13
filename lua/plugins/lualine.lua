@@ -3,7 +3,7 @@ return {
   dependecies = { 'nvim-tree/nvim-web-devicons' },
   config = function ()
     local custom_catppuccin = require('lualine.themes.catppuccin')
-    custom_catppuccin.normal.c.bg = require("catppuccin.palettes").get_palette("mocha").mantle
+    custom_catppuccin.normal.c.bg = require("catppuccin.palettes").get_palette("mocha").surface1
 
     require('lualine').setup {
       options = {
