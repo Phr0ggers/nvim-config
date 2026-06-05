@@ -1,15 +1,16 @@
+--plugins/lualine.lua
 return {
   'nvim-lualine/lualine.nvim',
   dependecies = { 'nvim-tree/nvim-web-devicons' },
-  config = function ()
-    local custom_catppuccin = require('lualine.themes.catppuccin')
-    custom_catppuccin.normal.c.bg = require("catppuccin.palettes").get_palette("mocha").surface1
+
+  config = function()
 
     require('lualine').setup {
       options = {
-        theme = custom_catppuccin,
+        theme = 'catppuccin-nvim',
         globalstatus = true,
       }
     }
   end,
+
 }

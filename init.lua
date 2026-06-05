@@ -1,4 +1,4 @@
--- [[ Basic Settings ]]
+--- [[ Basic Settings ]] ---
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -10,52 +10,54 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.have_nerd_font = true
 
 vim.o.number = true
-
 vim.o.mouse = 'a'
-
 vim.o.showmode = false
 
-vim.o.undofile = true
+vim.o.confirm = true
 
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
-vim.o.confirm = true
-
-vim.opt.clipboard = 'unnamedplus'
-
+vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
 vim.opt.expandtab = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.smarttab = true
 
 vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.fillchars:append { eob = " " }
+
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undofile = true
+vim.o.clipboard = 'unnamedplus'
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
   callback = function()
     vim.hl.on_yank()
   end,
 })
 
-vim.opt.fillchars:append { eob = " " }
-vim.o.linespace = 2
+vim.opt.termguicolors = true
+vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 
 
-
-vim.g.rust_recommended_style = 0
--- [[ Custom Keymaps ]]
+--- [[ Custom Keymaps ]] ---
 
 vim.keymap.set('i', 'jj', '<Esc>')
-
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+vim.keymap.set('n', '<leader>h', '<C-w>h')
+vim.keymap.set('n', '<leader>j', '<C-w>j')
+vim.keymap.set('n', '<leader>k', '<C-w>k')
+vim.keymap.set('n', '<leader>l', '<C-w>l')
 
-
--- [[ Install `lazy.nvim` plugin manager ]]
---    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
+--- [[ Lazy Setup ]] ---
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -70,28 +72,11 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
--- [[ Plugin Section ]]
+--- [[ Plugins ]] ---
 
-require('lazy').setup({
-  'nmac427/guess-indent.nvim',
-  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-  require 'plugins.treesitter',
-  require 'plugins.miniNvim',
-  require 'plugins.nvim-tree',
-  require 'plugins.gruvbox-colorscheme',
-  require 'plugins.catppuccin-colorscheme',
-  require 'plugins.gitsigns',
-  require 'plugins.telescope',
-  require 'plugins.LSP',
-  require 'plugins.autocomplete',
-  require 'plugins.whichkey',
-  require 'plugins.autopairs',
-  require 'plugins.lualine',
-  -- require 'plugins.vim-obsession',
-  'vyfor/cord.nvim',
-})
+require('lazy').setup(
+  'plugins'
+)
 
-
--- [[ Colortheme ]]
-
+--- [[ Colorscheme ]] ---
 vim.cmd.colorscheme 'catppuccin'
