@@ -25,3 +25,11 @@ map('n', '<leader>fr', builtin.oldfiles, {
 map('n', '<leader>fd', builtin.diagnostics, {
   desc = '[F]ind [D]iagnostics',
 })
+
+map('n', '<leader>/', function ()
+  builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+    previewer = false,
+  })
+end,{
+  desc = '[/] Find in Current Buffer',
+})
