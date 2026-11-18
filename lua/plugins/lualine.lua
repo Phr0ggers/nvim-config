@@ -7,7 +7,7 @@ return {
 
     require('lualine').setup {
       options = {
-        theme = 'catppuccin-nvim',
+        theme = 'gruvbox',
         globalstatus = true,
       }
     }
